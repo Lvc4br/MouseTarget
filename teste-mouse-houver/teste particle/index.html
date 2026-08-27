@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  
+  <title>Particle Effect Example</title>
+</head>
+<body>
+  <div class="hero-content">
+    <div class="text">
+      <h1>Hi, I'm Luca Toniolo</h1>
+      <h2>I'm a <span class="skillis">Programmer</span></h2>
+      <p>I create 3D projects and games. Focused on UX, motion, and immersive design.</p>
+      <a href="#contact" class="btn" id="contact-btn">Contact Me</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="img/WhatsApp Image 2025-02-25 at 21.55.48.jpeg" alt="Luca photo" />
+      <div class="particles-container"></div>
+    </div>
+  </div>
+</body>
+
+<script>
+const heroImage = document.querySelector('.hero-image');
+const particlesContainer = document.querySelector('.particles-container');
+
+function generateParticles(event) {
+    const numParticles = 50;  // Aumente o número de partículas
+    const heroRect = heroImage.getBoundingClientRect();
+
+    for (let i = 0; i < numParticles; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+
+        let particleX = Math.random() * heroImage.clientWidth;
+        let particleY = Math.random() * heroImage.clientHeight;
+
+        const edge = Math.floor(Math.random() * 4);
+        if (edge === 0) {
+            particleY = 0;
+        } else if (edge === 1) {
+            particleY = heroImage.clientHeight;
+        } else if (edge === 2) {
+            particleX = 0;
+        } else if (edge === 3) {
+            particleX = heroImage.clientWidth;
+        }
+
+        // Direção e rotação
+        const xDirection = Math.random() * 50 - 25;
+        const yDirection = Math.random() * -200;
+        const rotation = Math.random() * 360 + 'deg';
+
+        // Cor das partículas (gradiente mais realista)
+        const color = `rgb(${Math.random() * 255}, ${Math.random() * 100 + 100}, ${Math.random() * 100})`; // Cores mais quentes
+
+        // Posicionamento RELATIVO ao container
+        particle.style.left = `${particleX}px`;
+        particle.style.top = `${particleY}px`;
+        particle.style.setProperty('--x', `${xDirection}px`);
+        particle.style.setProperty('--y', `${yDirection}px`);
+        particle.style.setProperty('--rotation', rotation);
+        particle.style.background = color;
+
+        // Variando a opacidade e o tamanho para um efeito mais dinâmico
+        particle.style.opacity = Math.random() * 0.5 + 0.5;
+        particle.style.transform = `scale(${Math.random() * 0.6 + 0.8}) rotate(${rotation})`;
+
+        particlesContainer.appendChild(particle);
+
+        setTimeout(() => {
+            particle.remove();
+        }, 2500);
+    }
+}
+
+heroImage.addEventListener('click', generateParticles);
+</script>
+
+</html>
