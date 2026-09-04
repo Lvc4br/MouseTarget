@@ -1,17 +1,19 @@
 # MouseTarget
 
-> Interactive UI experiment using mouse position to create dynamic lighting effects on cards.
+> Front-end programming experiment using mouse position to drive dynamic UI effects.
 
-## 🎯 About
+## 🎯 Purpose
 
-This project explores how mouse coordinates can be captured in the browser and used to drive visual effects through CSS custom properties.
+This project explores how **JavaScript, DOM events and CSS custom properties** can work together to create interactive browser interfaces.
+
+It is one of my practical front-end coding experiments and demonstrates a small feature built from scratch.
 
 ## ✨ Features
 
 - Mouse-position tracking per card
 - Dynamic radial lighting effect
 - CSS custom properties (`--mouse-x` and `--mouse-y`)
-- Hover transitions and subtle scaling
+- Hover transitions and scaling
 - Responsive card layout
 
 ## 🛠️ Technologies
@@ -39,13 +41,12 @@ MouseTarget/
     └── style.css
 ```
 
-## 🚀 Future Improvements
+## 📈 Role in My GitHub
 
-- Add touch/mobile interaction
-- Improve accessibility
-- Add richer card content
-- Separate JavaScript into its own module
+This is a **small practical coding project**, useful for demonstrating front-end fundamentals and experimentation with browser interaction.
 
-## Author
+It is not intended to represent my complete programming level; more advanced projects can replace it as my skills develop.
+
+## 👤 Author
 
 **Luca Toniolo — Lvc4br**
