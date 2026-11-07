@@ -1,6 +1,10 @@
-# MouseTarget — Experimento de interação com mouse
+# MouseTarget — Experimentos de interação
 
-Pequeno experimento de front-end para praticar eventos do mouse e efeitos visuais controlados por JavaScript e CSS. O projeto não usa framework, bundler ou backend.
+> Experimento de front-end focado em eventos de mouse, coordenadas relativas ao elemento e efeitos visuais responsivos ao cursor.
+
+<sub>HTML5 · CSS3 · JavaScript nativo · DOM</sub>
+
+Projeto de estudo sem framework, processo de build ou backend. A implementação principal demonstra cartões com realce radial controlado pela posição do cursor; há também uma pasta separada com um experimento de partículas. O objetivo é demonstrar fundamentos de interação no navegador, não oferecer uma biblioteca pronta para produção.
 
 ## Objetivo e comportamento
 
